@@ -28,7 +28,7 @@ import cv from '@/assets/cv.pdf'
 
             <div class="contact-links">
               <a href="https://github.com/aspenwang" target="_blank">github</a>
-              <a href="https://linkedin.com/in/aspenwang" target="_blank">linkedin</a>
+              <a href="https://www.linkedin.com/in/aspen-w-334619251/" target="_blank">linkedin</a>
               <a :href="cv" target="_blank">cv</a>
             </div>
             <a class="email-link" href="mailto:yumengwang@vassar.edu">
