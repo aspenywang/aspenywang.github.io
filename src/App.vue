@@ -27,7 +27,7 @@ import cv from '@/assets/cv.pdf'
             <h2>[contact]</h2>
 
             <div class="contact-links">
-              <a href="https://github.com/azure7749" target="_blank">github</a>
+              <a href="https://github.com/aspenywang" target="_blank">github</a>
               <a href="https://www.linkedin.com/in/aspen-w-334619251/" target="_blank">linkedin</a>
               <a :href="cv" target="_blank">cv</a>
             </div>
