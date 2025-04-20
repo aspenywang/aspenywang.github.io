@@ -1,4 +1,3 @@
-/* reset + base */
 *,
 *::before,
 *::after {
@@ -7,7 +6,6 @@
   padding: 0;
 }
 
-/* only style the header itself, not with .section */
 header#hero {
   display: flex;
   justify-content: center;
@@ -21,7 +19,6 @@ header#hero {
   z-index: 1000;
 }
 
-/* push everything below the fixed header */
 body {
   padding-top: 5rem;
   font-family: 'Garamond', serif;
@@ -30,33 +27,29 @@ body {
 
 }
 
-/* now style just your about area */
 .about-section {
   max-width: 900px;
-  margin: 0 auto;     /* center it */
+  margin: 0 auto;
   padding: 2rem 1rem;
 }
 
 .about-header {
   display: flex;
-  /* stretch both columns to the same height */
   align-items: stretch;
   gap: 2rem;
 }
 
 .about-info {
+  max-width: 300px;
   display: flex;
   flex-direction: column;
-  /* now it will stretch to avatar height */
   flex: 1;
 }
 
-/* push this block to the bottom */
 .contact-block {
   margin-top: auto;
 }
 
-/* optional styling */
 .contact-links a{
   font-size: 14pt;
   display: flex;
@@ -67,7 +60,6 @@ body {
   font-size: 14pt;
 }
 
-/* avatar styling */
 .avatar {
   width: 300px;
   height: 300px;
@@ -76,52 +68,57 @@ body {
   flex-shrink: 0;
 }
 @media (max-width: 700px) {
-  /* 1) make the section stack top → bottom */
-  #about-container {
+  #about-container
+ {
+
+    display: flex;
     flex-direction: column;
-    align-items: center;        /* center both children */
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  #content-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 0 1rem;
   }
 
-  /* 2) inside the top child, stack image + info vertically */
-  #about-container .about-header {
+  #about-container .about-header,
+  #content-container .content-header {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
 
-  /* 3) center the “About” heading */
-  #about-container .about-text h2 {
-    text-align: center;
+  #about-container .about-text,
+  #content-container .content-text {
+    width: clamp(200px, 100%, 300px);
+    margin: 1rem auto;
   }
 
-  /* 4) constrain the about-text width */
-  #about-container .about-text {
-    max-width: 300px;     /* or e.g. 320px */
-    margin: 1rem auto;  /* center it */
-  }
-
-  /* optional: shrink avatar */
-  #about-container .avatar {
-    width: 300px;
-    height: 300px;
+  #about-container .about-text h2,
+  #content-container .content-text h2 {
+    text-align: left;
   }
 }
 
 
-/* stack links vertically or horizontally?
-   Here we do a vertical list: */
+
 .contact-links {
 
   font-size: 1rem;
   display: flex;
-  gap: 0.5rem;            /* space between links */
-  flex-wrap: wrap;      /* if it gets too narrow, links will wrap */
-  justify-content: left; /* or flex-start, as you like */
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: left;
   font-weight: 500;
 }
 
 
-/* (optional) make each link a bit more button‑like */
 .contact-links a {
   justify-content: left;
   display: inline-block;
@@ -132,7 +129,7 @@ body {
 .about-text {
   text-align: left;
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
   margin: 0 auto;
 }
@@ -142,8 +139,8 @@ body {
 
 body {
   display: flex;
-  flex-direction: column;   /* stack header → about → footer */
-  align-items: center;      /* center everything horizontally */
+  flex-direction: column;
+  align-items: center;
   background: #FFFFFF;
   color: #222;
   line-height: 1.5;
@@ -167,40 +164,27 @@ h1 {
 h2{
   font-size: 16pt;
 }
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-
-}
-
-/* contact links */
 
 .links a:hover, a:focus, a:active, a:visited {
   text-decoration: none;
 }
-/* base link style */
-/* anchors in the right‑of‑avatar contact box */
+
 .contact-links a,
 .about-text a,
 .about-info a{
-  font-weight: bold;       /* bold text */
-  color: inherit;          /* don't use default blue */
-  text-decoration: none;   /* no underline */
-  padding: 0.25rem 0.25rem; /* clickable padding */
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.25rem 0.25rem;
   border-radius: 4px;
 }
 
-/* visited stays the same */
 .contact-links a:visited,
 .about-text a:visited
 .about-info a:visited{
   color: inherit;
 }
 
-/* subtle gray background on hover */
 .contact-links a:hover,
 .about-text a:hover,
 .about-info a:hover{

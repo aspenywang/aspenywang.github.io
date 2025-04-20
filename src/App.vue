@@ -38,16 +38,21 @@ import cv from '@/assets/cv.pdf'
         </div>
       </div>
 
-
+    </section>
+    <section class="section" id="content-container" >
       <!-- below: the actual about text -->
       <div class="about-text">
         <h2>[about]</h2>
 
         <p>
-          My passion in exploring human‑centered application of language
-          technologies has driven me to pursue research opportunities that lead to graduate studies in NLP and LLM. I am interested in research including decision‑making,
-          knowledge reasoning, machine translation, and speech synthesis.
+          My passion for exploring human-centered applications of language technologies has driven me to pursue
+          research opportunities that lead to graduate studies in NLP and LLM. My research interests include
+          decision-making, knowledge reasoning, machine translation, speech synthesis, and human-computer
+          interaction. I wish to contribute to the development of AI systems that improve linguistic accessibility and
+          enable seamless, context-aware communication across user communities
         </p>
+        <h2>[experience]</h2>
+
         <p>
           I have worked as a summer research intern at
           <a href="https://lab.depositar.io" target="_blank">depositar lab</a>,
@@ -55,11 +60,9 @@ import cv from '@/assets/cv.pdf'
         </p>
       </div>
     </section>
-
     </body>
 
-    <footer class="links">
-
+    <footer>
     </footer>
 
 
