@@ -1,0 +1,210 @@
+/* reset + base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* only style the header itself, not with .section */
+header#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 8rem;
+  background: #eee;
+  font-family: 'Garamond', serif;
+  z-index: 1000;
+}
+
+/* push everything below the fixed header */
+body {
+  padding-top: 5rem;
+  font-family: 'Garamond', serif;
+  font-size: 16pt;
+
+
+}
+
+/* now style just your about area */
+.about-section {
+  max-width: 900px;
+  margin: 0 auto;     /* center it */
+  padding: 2rem 1rem;
+}
+
+.about-header {
+  display: flex;
+  /* stretch both columns to the same height */
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  /* now it will stretch to avatar height */
+  flex: 1;
+}
+
+/* push this block to the bottom */
+.contact-block {
+  margin-top: auto;
+}
+
+/* optional styling */
+.contact-links a{
+  font-size: 14pt;
+  display: flex;
+  gap: 0.5rem;
+}
+.email-link {
+  margin-top: 0.5rem;
+  font-size: 14pt;
+}
+
+/* avatar styling */
+.avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 8rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+@media (max-width: 700px) {
+  /* 1) make the section stack top → bottom */
+  #about-container {
+    flex-direction: column;
+    align-items: center;        /* center both children */
+  }
+
+  /* 2) inside the top child, stack image + info vertically */
+  #about-container .about-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* 3) center the “About” heading */
+  #about-container .about-text h2 {
+    text-align: center;
+  }
+
+  /* 4) constrain the about-text width */
+  #about-container .about-text {
+    max-width: 300px;     /* or e.g. 320px */
+    margin: 1rem auto;  /* center it */
+  }
+
+  /* optional: shrink avatar */
+  #about-container .avatar {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+/* stack links vertically or horizontally?
+   Here we do a vertical list: */
+.contact-links {
+
+  font-size: 1rem;
+  display: flex;
+  gap: 0.5rem;            /* space between links */
+  flex-wrap: wrap;      /* if it gets too narrow, links will wrap */
+  justify-content: left; /* or flex-start, as you like */
+  font-weight: 500;
+}
+
+
+/* (optional) make each link a bit more button‑like */
+.contact-links a {
+  justify-content: left;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+}
+
+
+.about-text {
+  text-align: left;
+  line-height: 1.6;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+
+body {
+  display: flex;
+  flex-direction: column;   /* stack header → about → footer */
+  align-items: center;      /* center everything horizontally */
+  background: #FFFFFF;
+  color: #222;
+  line-height: 1.5;
+}
+
+
+/* hero container */
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+a:hover, a:focus {
+  text-decoration:none;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
+}
+h2{
+  font-size: 16pt;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
+}
+
+/* contact links */
+
+.links a:hover, a:focus, a:active, a:visited {
+  text-decoration: none;
+}
+/* base link style */
+/* anchors in the right‑of‑avatar contact box */
+.contact-links a,
+.about-text a,
+.about-info a{
+  font-weight: bold;       /* bold text */
+  color: inherit;          /* don't use default blue */
+  text-decoration: none;   /* no underline */
+  padding: 0.25rem 0.25rem; /* clickable padding */
+  border-radius: 4px;
+}
+
+/* visited stays the same */
+.contact-links a:visited,
+.about-text a:visited
+.about-info a:visited{
+  color: inherit;
+}
+
+/* subtle gray background on hover */
+.contact-links a:hover,
+.about-text a:hover,
+.about-info a:hover{
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
