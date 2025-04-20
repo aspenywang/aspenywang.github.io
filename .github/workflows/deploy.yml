@@ -16,7 +16,7 @@ jobs:
       # 2. install Node.js
       - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '23'
 
       # 3. install dependencies & build
       - run: npm ci
