@@ -49,7 +49,7 @@ import cv from '@/assets/cv.pdf'
           knowledge reasoning, machine translation, and speech synthesis.
         </p>
         <p>
-          I have worked as a summer intern at
+          I have worked as a summer research intern at
           <a href="https://lab.depositar.io" target="_blank">depositar lab</a>,
           Academia Sinica.
         </p>
