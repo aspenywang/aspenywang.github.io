@@ -1,0 +1,394 @@
+:root {
+  color-scheme: light;
+  --header-offset: 98px;
+  --bg: #fbfaf7;
+  --surface: #f3f1ec;
+  --text: #2f2d2a;
+  --muted: #6f6a61;
+  --line: #ded9ce;
+  --link: #4f675f;
+  --link-hover: #263f37;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #191816;
+  --surface: #24221f;
+  --text: #ebe7dd;
+  --muted: #aaa299;
+  --line: #39352f;
+  --link: #a9c2b8;
+  --link-hover: #d6e5df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Inter,
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.site-shell {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 28px 24px 64px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 20px;
+  align-items: center;
+  margin: 0 -24px;
+  padding: 28px 24px 26px;
+  background: var(--bg);
+}
+
+.site-main {
+  padding-top: 30px;
+}
+
+.site-name {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.site-nav {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.site-nav a,
+.theme-toggle {
+  border-radius: 6px;
+  color: var(--muted);
+  padding: 4px 8px;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current='page'],
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+}
+
+.theme-toggle svg {
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+}
+
+.home-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: clamp(44px, 8vw, 92px);
+  align-items: start;
+}
+
+.profile-panel {
+  position: sticky;
+  top: var(--header-offset);
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+}
+
+.portrait {
+  width: 208px;
+  height: 208px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 58%;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  max-width: 220px;
+  width: 100%;
+  color: var(--link);
+}
+
+.icon-link {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  color: var(--link);
+  font-size: 1.02rem;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.icon-link svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.icon-link:hover,
+.icon-link:focus-visible {
+  background: var(--surface);
+  color: var(--link-hover);
+  text-decoration: none;
+}
+
+.home-content {
+  display: grid;
+  gap: 60px;
+  min-width: 0;
+}
+
+.intro-section {
+  padding-top: 10px;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 650;
+  letter-spacing: 0;
+  line-height: 1.12;
+}
+
+h2 {
+  display: inline-block;
+  margin: 0 0 22px;
+  border-bottom: 3px solid var(--line);
+  color: var(--text);
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
+  font-weight: 650;
+  letter-spacing: 0;
+  line-height: 1.05;
+}
+
+.lede {
+  max-width: 650px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.page {
+  max-width: 680px;
+}
+
+.prose-page p,
+.entry-item p {
+  color: var(--muted);
+}
+
+.prose-page p {
+  max-width: 640px;
+  font-size: 1.04rem;
+}
+
+.entry-list {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.entry-item details {
+  border-radius: 8px;
+}
+
+.entry-item summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: start;
+  border-radius: 8px;
+  cursor: pointer;
+  list-style: none;
+  padding: 8px 0;
+}
+
+.entry-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.entry-item summary::after {
+  content: '+';
+  color: var(--muted);
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.entry-item details[open] summary::after {
+  content: '-';
+}
+
+.entry-item summary:hover strong,
+.entry-item summary:focus-visible strong {
+  color: var(--link-hover);
+}
+
+.summary-content {
+  display: grid;
+  gap: 8px;
+}
+
+.entry-item strong {
+  color: var(--text);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.title-place {
+  color: var(--muted);
+  font-size: 0.82em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.summary-description {
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.entry-item details > p {
+  max-width: 620px;
+  margin-bottom: 6px;
+  padding-right: 34px;
+}
+
+.course-list {
+  display: grid;
+  gap: 4px;
+  margin: 4px 0 0;
+  padding: 0 0 0 1.1rem;
+  color: var(--muted);
+}
+
+.course-list li {
+  padding-left: 0.15rem;
+}
+
+.tag-line {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 760px) {
+  .site-shell {
+    padding: 22px 18px 48px;
+  }
+
+  .site-header {
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    margin: 0 -18px;
+    padding: 22px 18px 20px;
+  }
+
+  .site-main {
+    padding-top: 22px;
+  }
+
+  .site-nav {
+    grid-column: 1 / -1;
+    flex-wrap: wrap;
+    order: 3;
+  }
+
+  .site-nav a,
+  .theme-toggle {
+    padding: 5px 8px;
+  }
+
+  .home-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .profile-panel {
+    position: static;
+  }
+
+  .portrait {
+    width: 220px;
+    height: 220px;
+  }
+
+  .profile-links {
+    max-width: none;
+  }
+
+  .home-content {
+    gap: 52px;
+  }
+}
