@@ -33,6 +33,20 @@ function App() {
     localStorage.setItem('theme', theme)
   }, [theme])
 
+  useEffect(() => {
+    const header = document.querySelector('.site-header')
+    const main = document.querySelector('.site-main')
+    const update = () => {
+      const headerH = header.getBoundingClientRect().height
+      const mainPT = parseFloat(getComputedStyle(main).paddingTop)
+      document.documentElement.style.setProperty('--header-offset', `${headerH + mainPT}px`)
+    }
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(header)
+    return () => ro.disconnect()
+  }, [])
+
   const Page = useMemo(() => {
     if (route === '/notes') return Notes
     return Home

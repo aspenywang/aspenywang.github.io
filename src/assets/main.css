@@ -73,7 +73,7 @@ a:focus-visible {
 .site-shell {
   width: min(100%, 980px);
   margin: 0 auto;
-  padding: 28px 24px 64px;
+  padding: 0 24px 64px;
 }
 
 .site-header {
@@ -345,7 +345,7 @@ h2 {
 
 @media (max-width: 760px) {
   .site-shell {
-    padding: 22px 18px 48px;
+    padding: 0 18px 48px;
   }
 
   .site-header {
