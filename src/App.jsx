@@ -100,7 +100,8 @@ function Home() {
         <section className="intro-section" aria-labelledby="intro-heading">
           <h1 id="intro-heading">hi, i'm aspen.</h1>
           <p className="lede">
-            Computer Science Senior at Vassar College with a minor in Statistics. My research
+            Computer Science Senior at Vassar College with a minor in Statistics.<br />
+            My research
             interests are broadly in reliable and trustworthy AI/ML, AI agents, and
             human-centered AI.
           </p>
