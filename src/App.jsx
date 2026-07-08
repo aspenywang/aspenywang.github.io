@@ -112,16 +112,24 @@ function Home() {
 
       <div className="home-content">
         <section className="intro-section" aria-labelledby="intro-heading">
-          <h1 id="intro-heading">hi, i'm aspen.</h1>
-          <p className="lede">
-            Computer Science Senior at Vassar College with a minor in Statistics.<br />
-            My research
-            interests are broadly in reliable and trustworthy AI/ML, AI agents, and
-            human-centered AI.
-          </p>
-          <p className="lede">
-            Outside of research, I enjoy gaming, traveling, literature, and design.
-          </p>
+        <h1 id="intro-heading">hi, i'm aspen.</h1>
+        <p className="lede">
+          I recently graduated from Vassar College 
+          with a B.A. in Computer Science and
+          a minor in Statistics.<br />
+          I am currently a Research Assistant at the{' '}
+          <a href="https://homepage.iis.sinica.edu.tw/pages/lwku/">NLPSA Lab</a>,
+          Academia Sinica, and also work with the{' '}
+          <a href="https://www.acmlab.org/">ACM Lab</a> under the supervision of
+          Prof. Wu.
+        </p>
+        <p className="lede">
+          My research interests center on reliable and trustworthy AI, LLM localization,
+          low-resource and underrepresented NLP, and human-centered AI.
+        </p>
+        <p className="lede">
+          Outside of research, I enjoy gaming, traveling, literature, and design.
+        </p>
         </section>
 
         <ExperienceSection />

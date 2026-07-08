@@ -1,4 +1,25 @@
 export const experiences = [
+{
+  title: 'Research Assistant @ NLPSA Lab, Academia Sinica',
+  description: 'Localized LLM evaluation and alignment.',
+  details:
+    'Working on localized LLM evaluation, cultural-context reasoning, and alignment for public-interest language technologies.(Summer, 2026 - Present)',
+  tags: [
+    'NLP',
+    'LLM Evaluation',
+    'Alignment',
+    'Localized AI',
+    'Trustworthy AI',
+    'Human-Centered AI',
+  ],
+},
+  {
+    title: 'Research Assistant @ ACM Lab, UNC Chapel Hill',
+    description: 'Data Harmonization & Neuroimaging Classification.',
+    details:
+      'Working on heterogeneous data harmonization methods for neuroimaging & biomedical data. (Spring, 2026 - Present)',
+    tags: ['AI4Science', 'data harmonization', 'neuroimaging', 'machine learning'],
+  },
   {
     title: 'Research Intern @ University of Tennessee, Knoxville',
     description: 'Reliable and trustworthy machine learning.',
