@@ -120,8 +120,7 @@ function Home() {
           I am currently a Research Assistant at the{' '}
           <a href="https://homepage.iis.sinica.edu.tw/pages/lwku/">NLPSA Lab</a>,
           Academia Sinica, and also work with the{' '}
-          <a href="https://www.acmlab.org/">ACM Lab</a> under the supervision of
-          Prof. Wu.
+          <a href="https://www.acmlab.org/">ACM Lab</a> at UNC, Chapel Hill.
         </p>
         <p className="lede">
           My research interests center on reliable and trustworthy AI, LLM localization,
